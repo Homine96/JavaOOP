@@ -32,5 +32,4 @@ class Masks extends HygieneItems{
         return String.format("Name: %s  Price: %d  Quantity: %d Units: %s QuantInPack: %d ",
                 this.name, this.price, this.quantity, this.units, this.quantinpack);
     }
-    
 }
