@@ -11,6 +11,10 @@ public class Wolf extends WildAnimal {
         this.leader = leader;
     }
 
+    public Wolf(){
+        this(140, 20, "grey", "forest", "3/5/1995", "Leader");
+    }
+
     @Override
     public void makeSound() {
         System.out.println("Auuuuuuu");;

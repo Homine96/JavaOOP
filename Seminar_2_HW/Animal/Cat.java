@@ -13,6 +13,10 @@ public class Cat extends HomeAnimal{
         
     }
 
+    public Cat(){
+        this(20, 5, "green", "Murzik", "Hoome", "yes", "black", "3/04/2019", "yes");
+    }
+
     public String getInfo() {
         return String.format(" %s Wool: %s ",
                 super.getInfo(), this.wool );

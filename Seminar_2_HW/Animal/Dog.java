@@ -13,6 +13,11 @@ public class Dog extends HomeAnimal implements Train {
         this.training = training;
     }
 
+    public Dog(){
+        this(90, 15, "blue", "Rich", "Korgi", "yes", "white-braun", "12/01/2022", "Yes");
+    }
+
+
         
     public String getInfo() {
         return String.format("%s Training: %s ",
