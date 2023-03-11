@@ -1,7 +1,6 @@
 package Seminar_2_HW;
 
-import Seminar_2_HW.Abstract.Animal;
-import Seminar_2_HW.Abstract.HomeAnimal;
+
 import Seminar_2_HW.Abstract.WildAnimal;
 import Seminar_2_HW.Animal.*;
 import Seminar_2_HW.Birds.Aist;
