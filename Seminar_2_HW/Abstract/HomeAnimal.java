@@ -20,7 +20,7 @@ public abstract class HomeAnimal extends Animal {
     public abstract void showAffection();
 
     public String getInfo() {
-        return String.format(" %s Name: %s  Breed: %s  Vaccine: %s ColorWool: %s Date: %s ",
+        return String.format("%s Name: %s  Breed: %s  Vaccine: %s ColorWool: %s Date: %s ",
                 super.getInfo(), this.name, this.breed, this.vaccine, this.colorwool, this.date );
     }
     
