@@ -2,8 +2,8 @@ package Seminar_2_HW.Abstract;
 
 public abstract class  WildAnimal extends Animal {
 
-    private String habitat;
-    private String dateoflocation;
+    protected String habitat;
+    protected String dateoflocation;
 
     public WildAnimal(int height, int weight, String eyeColor, String habitat, String dateoflocation) {
         super(height, weight, eyeColor);
