@@ -2,11 +2,11 @@ package Seminar_2_HW.Abstract;
 
 public abstract class HomeAnimal extends Animal {
 
-    private String name;
-    private String breed; // порода собак
-    private String vaccine;
-    private String colorwool;
-    private String date;
+    protected String name;
+    protected String breed; // порода собак
+    protected String vaccine;
+    protected String colorwool;
+    protected String date;
 
     public HomeAnimal(int height, int weight, String eyeColor, String name, String breed, String vaccine, String colorwool, String date ) {
         super(height, weight, eyeColor);
