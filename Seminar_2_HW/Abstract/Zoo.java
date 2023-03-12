@@ -1,7 +1,7 @@
 package Seminar_2_HW.Abstract;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.List;
 
 import Seminar_2_HW.Animal.Cat;
 import Seminar_2_HW.Animal.Dog;
@@ -10,200 +10,85 @@ import Seminar_2_HW.Animal.Wolf;
 import Seminar_2_HW.Birds.Aist;
 import Seminar_2_HW.Birds.Hen;
 
-public class Zoo {
-    public static ArrayList<Animal> allAnimal = new ArrayList<>();
-    {
-    allAnimal.add(new Cat());
-    allAnimal.add(new Tiger());
-    allAnimal.add(new Dog());
-    allAnimal.add(new Wolf());
-    allAnimal.add(new Hen());
-    allAnimal.add(new Aist());
-    }
+public class Zoo  {
+
+    public static  List <Animal> allAnimal = new ArrayList<>();
 
     public int size(){
         return allAnimal.size();
     }
 
+    public void addCat(){
+        Zoo.allAnimal.add(new Cat());
 
-
-
-
-    public void addCat(Scanner input){
-        String name;
-        String breed;
-        String vaccine;
-        String colorwool;
-        String date;
-        int height;
-        int weight;
-        String eyeColor;
-        String wool;
-
-        System.out.print("Имя: ");
-        name = input.next();
-        System.out.print("Порода: ");
-        breed = input.next();
-        System.out.print("Вакцинирован?: ");
-        vaccine = input.next();
-        System.out.print("Введите цвет: ");
-        colorwool = input.next();
-        System.out.print("Дата рождения: ");
-        date = input.next();
-        System.out.print("Рост: ");
-        height = input.nextInt();
-        System.out.print("Вес: ");
-        weight = input.nextInt();
-        System.out.print("Цвет глаз: ");
-        eyeColor = input.next();
-        System.out.print("Наличие шерсти: ");
-        wool = input.next();
-
-        Zoo.allAnimal.add(new Cat(height, weight, colorwool, name, breed, vaccine, eyeColor, date, wool));
     }
 
-    public void addDog(Scanner input){
-        String name;
-        String breed;
-        String vaccine;
-        String colorwool;
-        String date;
-        int height;
-        int weight;
-        String eyeColor;
-        String training;
+    public void addDog(){
+        Zoo.allAnimal.add(new Dog());
 
-        System.out.print("Имя: ");
-        name = input.next();
-        System.out.print("Порода: ");
-        breed = input.next();
-        System.out.print("Вакцинирован?: ");
-        vaccine = input.next();
-        System.out.print("Введите цвет: ");
-        colorwool = input.next();
-        System.out.print("Дата рождения: ");
-        date = input.next();
-        System.out.print("Рост: ");
-        height = input.nextInt();
-        System.out.print("Вес: ");
-        weight = input.nextInt();
-        System.out.print("Цвет глаз: ");
-        eyeColor = input.next();
-        System.out.print("Наличие дресировки: ");
-        training = input.next();
-
-        allAnimal.add(new Dog(height, weight, colorwool, name, breed, vaccine, eyeColor, date, training));
     }
 
-    public void addTiger(Scanner input){
-        int height;
-        int weight;
-        String eyeColor;
-        String habitat;
-        String dateoflocation;
+    public void addTiger(){
+        Zoo.allAnimal.add(new Tiger());
 
-        System.out.print("Рост: ");
-        height = input.nextInt();
-        System.out.print("Вес: ");
-        weight = input.nextInt();
-        System.out.print("Цвет глаз: ");
-        eyeColor = input.next();
-        System.out.print("Место обитания: ");
-        habitat = input.next();
-        System.out.print("Дата обнаружения: ");
-        dateoflocation = input.next();
-
-        allAnimal.add(new Tiger(height, weight, eyeColor, habitat, dateoflocation));
     }
 
-    public void addWolf(Scanner input){
-        int height;
-        int weight;
-        String eyeColor;
-        String habitat;
-        String dateoflocation;
-        String leader;
+    public void addWolf(){
+        Zoo.allAnimal.add(new Wolf());
 
-        System.out.print("Рост: ");
-        height = input.nextInt();
-        System.out.print("Вес: ");
-        weight = input.nextInt();
-        System.out.print("Цвет глаз: ");
-        eyeColor = input.next();
-        System.out.print("Место обитания: ");
-        habitat = input.next();
-        System.out.print("Дата обнаружения: ");
-        dateoflocation = input.next();
-        System.out.print("Вожак стаи?: ");
-        leader = input.next();
-
-        allAnimal.add(new Wolf(height, weight, eyeColor, habitat, dateoflocation, leader));
     }
 
-    public void addHen(Scanner input){
-        int height;
-        int weight;
-        String eyeColor;
-        int h;
+    public void addAist(){
+        Zoo.allAnimal.add(new Aist());
 
-
-        System.out.print("Рост: ");
-        height = input.nextInt();
-        System.out.print("Вес: ");
-        weight = input.nextInt();
-        System.out.print("Цвет глаз: ");
-        eyeColor = input.next();
-        System.out.print("Высота полета: ");
-        h = input.nextInt();
-
-        allAnimal.add(new Hen(height, weight, eyeColor, h));
     }
 
-    public void addAist(Scanner input){
-        int height;
-        int weight;
-        String eyeColor;
-        int h;
+    public void addHen(){
+        Zoo.allAnimal.add(new Hen());
 
-
-        System.out.print("Рост: ");
-        height = input.nextInt();
-        System.out.print("Вес: ");
-        weight = input.nextInt();
-        System.out.print("Цвет глаз: ");
-        eyeColor = input.next();
-        System.out.print("Высота полета: ");
-        h = input.nextInt();
-
-        allAnimal.add(new Aist(height, weight, eyeColor, h));
     }
 
-    void showAll(){
+
+    public void showAll(){
         int index = 0;
-        for (Animal animal : allAnimal) {
+        for (Animal zoopark : allAnimal) {
             System.out.printf("%d) ", index);
-            System.out.println(animal);
+            System.out.println(zoopark);
             System.out.println("----");
             index++;
         }
     }
 
-    void removeAnimal(int num){
+    public void removeAnimal(int num){
         allAnimal.remove(num);
     }
 
-    void showAnimal(int num){
-       System.out.println(allAnimal.get(num).getInfo()); 
+    public void showAnimal(int num){
+       System.out.println(allAnimal.get(num));
+       if (allAnimal.get(num) instanceof HomeAnimal){
+        ((HomeAnimal)allAnimal.get(num)).showAffection();
+       }
+       if (allAnimal.get(num) instanceof Birds){
+        ((Birds)allAnimal.get(num)).fly();
+       }  
     }
 
-    void animalSay(int num) {
+    public void makeSound(int num) {
         allAnimal.get(num).makeSound();
     }
 
-    void sayAllAnimals(){
+    void sayMakeSound(){
+        for (Animal zoopark : allAnimal) {
+            zoopark.makeSound();
+        }
+    }
+
+    public void sayAllAnimals() {
         for (Animal animal : allAnimal) {
             animal.makeSound();
         }
     }
-    
+
+
+  
 }
